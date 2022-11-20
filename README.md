@@ -1,31 +1,17 @@
 # Food-picking-system
 
-# Expertkompetens 
-## Project report - IoT report template 
-
-### sk in någonstans
-
-The boards that I was concidering were a rasperry pi pico W and a esp32, these boards both have benefits and disadvantages. I choose the rasperry pi pico W since I had this one at home and wanted to start right away, but in afterhand I think that a esp32 maybe would have been a smarter choice. The reaon for this is because I am in big need of as many possibilities as possible to attach moduls, this is something where a esp32 is better at, since this has more pin holes. Another aspect that I would benefit from is because the fact that my system is working pretty rarelly, more specific 2 times a day, depending on the user. This means that it uses energy most of the time without being usefull unless you plug it in every time it will be used. This is of course an option since it placed in my house. But a better idea would be to make it sleep, this is something that can be done using a esp32 but is not possible to achieve using a arduino. 
-
-Apart from this, the rasperry pi pico W has a advantage being a cheeper option, witch is beneficial for scalability. 
-
 **Table of Contents**
 
-
-
-# Template
-
-
-## Tutorial on how to build a smart coocking system [klar]
+## Tutorial on how to build a smart coocking system
 
 
 My name is Max Olsson and I have created a system to make it simple and more fun to coock as it prevents you from making misstakes. The project is a system that allowes you to pick a food from a local website where this then provides you with lighened LED lights that shows what ingridients to pick as well as a button to press when the indredient is picked, to make sure that not only the correct ingredients are picked but also all of them. It also provides you with the recipe and some entertainment while you at it. The time for this project is set to 80h but it highlly depends on how advanced the project is, since it can be very simple and also be extended to a very big project. 
 
-### Objectives [klar]
+### Objective
 
 The purpose of this project was to build something that is relatable to what I do for work but also provide me with something that makes something that I dont like, more enjoyable, in this case coocking. The purpose is to bulletproof coicking. The data can be used for many different purposes, first of all it can give me an insight in what ingredients that I actually use and what are just collecting dust in the storage. But also it is possible to calculate the cost of my meals, automaticlly. Another good benefit is that it can help me with having a good trackreckord of what exists in my storage, and therefore easy know what to buy.
 
-### Material (klar)
+### Material
 
 The basic setup for the IoT device that is created is very small, also it is very easily changible, for example all the buttons can be switched to any sensor that is wanted to be tested. In this project I have chosen to work with the Rasperry Pi Pico W device as seen in Fig. 1, it's a neat little device programmed by MicroPython and has several bands of connectivity. The device has many digital and analog input and outputs and is well suited for an IoT project.
 
@@ -45,7 +31,7 @@ The basic setup for the IoT device that is created is very small, also it is ver
 
 
 
-### Environment setup. [klar]
+### Environment setup
 
 The IDE that I have choosen to work with in this project is the Thonny IDE. The reason for this is several, first if using a rasperry pi microprocessor, thonny is preinstalled, this makes it good practice if every wanting to use that. Apart from this, it is very easy to work with files, all that has to be done is upload the file to the mocrocontroller, and then it is possible to make changes directlly in the microcontroller without having to first upload it to the computer. The structure is easy, a main file is used, as well as a .csv file and a JSON file where these keep track on storage and picked ingredients. For using the csv file, no extra library is used, for JSON, the library is already existing in the micropython basic library, therefore no extra instalation is needed. The only required instalation is that when first using the rasperry pi pico W, micropython has to be installed using Thonny. Both the .csv file and the .JSON file can easily be created inside the Thonny IDE, just by simply naming it accordinglly instead of having .py as for a python file. The real installation that was needed to be done apart from installing Thonny, was installing micropython on on the rasperry pi pico W, this was easilly done by pressing the button on the right bottom of the IDE, select the micropython for rasperry pimnpico W and install that on the microcontroller. 
 
@@ -63,13 +49,13 @@ The wire connections used within this device is shown in the Figure below
 <img width="595" alt="Skärmavbild 2022-11-19 kl  11 18 51" src="https://user-images.githubusercontent.com/116064953/202846271-146b3415-5a49-40ff-8ccc-4628bb1c1fae.png">
 
 
-## Platforms and infrastructure (klar)
+## Platforms and infrastructure
 
 The Platform I choose to use is a self made local website, therefore a local installation instead of using the cloud. This way is a free since it does not require any paid subsription. The decition to using a HTML website instead of a existing commersial option. This both since I wanted the freedome to design my own interface but also since I wanted to learn something new and not use already existing solutions. The perks of this is educationl as well as not a cheeper option since no payments is needed to the provider. On the other hand, using a already existing provider can be a better option in many ways, first it requeres less coding, and provides many options that is easily accesable, for example I a way of saving data, this was nothing I had thought of before resulting in me having to create my own solution while the solution from a commersial provider would probably be better and more easily accesable. In conclusion, my choice gives memore freedom in design and is cheeper but requires more work as well, therefore to scale it and for example if you want to sell the IoT device and give the customer the possibility to design their own platform, then a low-code option would probable have been used. 
 
 
 
-### The code (klar)
+### The code 
 
 Import core functions of your code here, and don't forget to explain what you have done. Do not put too much code here, focus on the core functionalities. Have you done a specific function that does a calculation, or are you using clever function for sending data on two networks? Or, are you checking if the value is reasonable etc. Explain what you have done, including the setup of the network, wireless, libraries and all that is needed to understand.
 
@@ -328,7 +314,7 @@ In the code snippet below, the LED light "led_2" is lightened.
 
 
 
-### The physical network layer (klar)
+### The physical network layer
 
 
 The wireless protocol that I used in this project is the WiFi protocol and the transport protocol is the HTTP protocol where the data is sent every time a operator initiates a HTTP request crom the webpage.
@@ -340,13 +326,13 @@ The data is only sent to the webpage as a command is requested from the operator
 When I decided what trasnportation protocol to use, I went for a option that had a big support system and therefore easier to google problem if needed. On the other hand if I were to start over I would probably have choosen for example MTQQ instead, this since it is developed for IoT applications. Also it has a lower response time than HTTP, especially as the payload increases, the response time for the MTQQ keeps constant while the response time increases if using HTTP. Althought this is not a big problem for my application since the data is not frequentlly send but also since the response time is not something that is a issue.
 
 
-### Visualisation and user interface (klar)
+### Visualisation and user interface
 
 The dashboard is build using HTML code. The dashboard is very simple, there are as seen several buttons, 3 buttons where different food options are showed. There is also one button for informing the system that the operator is done picking ingredients and one button that is informing the microcontrolller that the storage is filled to a certain stocfk level. There is also some text under the buttons, this is to include more explination and communication, for example informing the operator about the stock level or that the operator has forgot to pick any/some of the ingredients. The last part is a screen, this is connected to a website, before the meal is choosen, this allowes the operator for some entertainment while when the operator has picked the meal, this instead showcases a website with a recipee of the meal. The data is sent only to the webpage as the a request from the operator is sent by pressing a button, since everything is self build there are many options, for example the data older than a certain date can be deleted etc. but this is not used in this application since all data collected is important, despite the date of witch it was collected. When it comes to storing data, this is done with .csv and .JSON files. The .csv and .JSON file, data is sent to them only when it is needed, for example when picking a ingridient, this sends data to the .JSON and .csv files. The reasonging why I decided to use .JSON for storage, is because it is a easy way to use dictionary and to change values in this dictionary while a .csv file is used fore providing a list of picked ingredients, this since it provides a very simple way of appending a string to a existing list.
 
 There is no alerting services included in this device, altought this is one of the future intended steps. This to alert the operators when the stock of certain ingredients are low and a restock is required. 
 
-### Finalizing the design (klar)
+### Finalizing the design
 
 I think that the final result of the project is fine, there is plenty of things that could have been done better, many as have been discussed in this report. Althought I think the idea of the project was nice, but also since I plan to keep working with this in the future, it has many ways of testing new things and improvement possibilities, witch is good. 
 
