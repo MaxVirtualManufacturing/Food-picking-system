@@ -46,7 +46,8 @@ When it comes to scalability, the decition to build my own is probably cheaper i
 
 The wire connections used within this device is shown in the Figure below
 
-<img width="595" alt="Skärmavbild 2022-11-19 kl  11 18 51" src="https://user-images.githubusercontent.com/116064953/202846271-146b3415-5a49-40ff-8ccc-4628bb1c1fae.png">
+<img width="1044" alt="connections" src="https://user-images.githubusercontent.com/116064953/203000187-c9f15111-c574-4f8c-a915-fb8bf95534d7.png">
+
 
 
 ## Platforms and infrastructure
